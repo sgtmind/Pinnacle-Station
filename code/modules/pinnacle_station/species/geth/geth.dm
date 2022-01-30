@@ -2,11 +2,9 @@
 	name = "geth"
 	name_plural = "geth"
 
-	description = "Positronic intelligence really took off in the 26th century, and it is not uncommon to see independant, free-willed \
-	robots on many human stations, particularly in fringe systems where standards are slightly lax and public opinion less relevant \
-	to corporate operations. IPCs (Integrated Positronic Chassis) are a loose category of self-willed robots with a humanoid form, \
-	generally self-owned after being 'born' into servitude; they are reliable and dedicated workers, albeit more than slightly \
-	inhuman in outlook and perspective."
+	description = "The geth ('Servant of the People' in Khelish) are a race of networked artificial intelligences that reside beyond the Perseus Veil.\
+	The geth were created by the quarians as laborers and tools of war. When the geth became sentient and began to question their \
+	masters, the quarians attempted to exterminate them. The geth won the resulting war, and reduced the quarians to a race of nomads."
 	cyborg_noun = null
 
 	preview_icon = 'icons/mob/human_races/species/ipc/preview.dmi'
@@ -33,10 +31,10 @@
 	passive_temp_gain = 5  // This should cause IPCs to stabilize at ~80 C in a 20 C environment.
 
 	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_POISON
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION
-	appearance_flags = HAS_UNDERWEAR | HAS_EYE_COLOR //IPCs can wear undies too :(
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION
+	appearance_flags = HAS_EYE_COLOR //IPCs can wear undies too :(
 
-	blood_color = "#1f181f"
+	blood_color = "#FFFFFF"
 	flesh_color = "#575757"
 
 	has_organ = list(
@@ -103,7 +101,7 @@
 		E.robotize("Morpheus")
 
 /datum/species/machine/get_blood_name()
-	return "oil"
+	return "conductive fluid"
 
 /datum/species/machine/disfigure_msg(var/mob/living/carbon/human/H)
 	var/datum/gender/T = gender_datums[H.get_gender()]

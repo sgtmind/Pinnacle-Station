@@ -1,46 +1,77 @@
-/*
-/obj/item/clothing/under/systems_alliance/marine_fatigues
-	desc = "A standard issue uniform for the Systems Alliance marine corps."
-	name = "Systems Alliance fatigues"
-	icon = ITEM_INHAND
-	icon_override = MARINE_OVERRIDE
-	item_state = "UNSC Marine Fatigues"
-	icon_state = "uniform_obj"
-	worn_state = "UNSC Marine Fatigues"
-	starting_accessories = /obj/item/clothing/accessory/badge/tags
-*/
-/obj/item/clothing/head/helmet/space/void/systems_alliance/marine
+#define MARINE_OVERRIDE 'code/modules/pinnacle_station/clothing/systems_alliance_marine.dmi'
+
+
+/obj/item/clothing/head/systems_alliance/marine
 	name = "ONYX Mod I Helmet"
+	icon = MARINE_OVERRIDE
+	icon_override = MARINE_OVERRIDE
+	icon_state = "n7_helmet"
+	item_state = "n7_helmet_w"
 	desc = "A bright blue helmet issued to soldiers of the Systems Alliance Marine Corps. Designed to protect against hostile enviornemnts and smaller arms fire."
-	icon_state = "rig0-syndie"
-	item_state = "syndie_helm"
+	item_flags = 0
+	max_pressure_protection = VOIDSUIT_MAX_PRESSURE
+	min_pressure_protection = 0
+	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_AIRTIGHT
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|BLOCKHAIR
+	body_parts_covered = HEAD|FACE|EYES
+	permeability_coefficient = 0.01
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_MAJOR,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = 55,
+		laser = ARMOR_LASER_MINOR,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
-	siemens_coefficient = 0.3
 
-/obj/item/clothing/suit/space/void/systems_alliance/marine
-	icon_state = "rig-syndie"
+
+/obj/item/clothing/suit/armor/systems_alliance/marine
 	name = "ONYX Standard Battle Armor"
 	desc = "Developed by Ariake Technologies, this suit exchanges full protective coverage for visibility, unencumbered mobility, and increased accuracy. This is a full environmental armor, with a built-in biofeedback system regulating wearer's adrenaline surges and monitoring medical conditions. Standard issue for all marines."
-	item_state_slots = list(
-		slot_l_hand_str = "syndie_voidsuit",
-		slot_r_hand_str = "syndie_voidsuit",
+	icon = N7_OVERRIDE
+	icon_override = N7_OVERRIDE
+	icon_state = "n7_armor"
+	item_state = "n7_armor_w"
+	w_class = ITEM_SIZE_HUGE
+	gas_transfer_coefficient = 0
+	permeability_coefficient = 0
+	max_pressure_protection = VOIDSUIT_MAX_PRESSURE
+	min_pressure_protection = 0
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS
+	allowed = list(
+		/obj/item/tank/oxygen_emergency,
+		/obj/item/tank/oxygen_emergency_extended,
+		/obj/item/tank/nitrogen_emergency,
+		/obj/item/device/flashlight,
+		/obj/item/gun/energy,
+		/obj/item/gun/projectile,
+		/obj/item/ammo_magazine,
+		/obj/item/ammo_casing,
+		/obj/item/melee/baton,
+		/obj/item/handcuffs
 	)
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = 55,
 		laser = ARMOR_LASER_MINOR,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
-	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/suit_cooling_unit,/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/melee/energy/sword,/obj/item/handcuffs)
-	siemens_coefficient = 0.3
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+
+/obj/item/clothing/suit/armor/systems_alliance/n7
+	item_state_slots = list(
+		slot_l_hand_str = "space_suit_syndicate",
+		slot_r_hand_str = "space_suit_syndicate",
+	)
+/obj/item/clothing/suit/armor/captain/Initialize()
+	. = ..()
+	slowdown_per_slot[slot_wear_suit] = 1.1
+
+#undef MARINE_OVERRIDE
