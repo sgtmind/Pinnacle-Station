@@ -1,5 +1,5 @@
 /obj/aura/personal_shield
-	name = "personal shield"
+	name = "kinetic_barrier"
 
 /obj/aura/personal_shield/added_to(var/mob/living/L)
 	..()

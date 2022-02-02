@@ -374,6 +374,30 @@
 #define SPECIES_MONKEY      "Monkey"
 #define SPECIES_NABBER         "giant armoured serpentid"
 
+//Pinnacle-Station Species; Regular
+#define SPECIES_ASARI       "Asari"
+#define SPECIES_TURIAN      "Turian"
+#define SPECIES_QUARIAN     "Quarian"
+#define SPECIES_SALARIAN    "Salarian"
+#define SPECIES_BATARIAN    "Batarian"
+#define SPECIES_KROGAN      "Krogan"
+#define SPECIES_DRELL		"Drell"
+
+//Pinnacle-Station Species; Geth
+#define SPECIES_GETH       "Geth"
+#define SPECIES_GETH_DESTROYER "Geth Destroyer"
+#define SPECIES_GETH_PRIME		"Geth Prime"
+
+
+//Pinnacle-Station Species; Reaper Subtypes
+#define SPECIES_HUSK       "Husk"
+#define SPECIES_BANSHEE       "Banshee"
+#define SPECIES_BRUTE       "Brute"
+#define SPECIES_CANNIBAL       "Cannibal"
+#define SPECIES_MARAUDER	"Marauder"
+#define SPECIES_RAVAGER		"Ravager"
+
+
 #define UNRESTRICTED_SPECIES list(SPECIES_HUMAN, SPECIES_DIONA, SPECIES_IPC, SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_SKRELL, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_MULE)
 #define RESTRICTED_SPECIES   list(SPECIES_VOX, SPECIES_ALIEN, SPECIES_GOLEM)
 #define HUMAN_SPECIES        list(SPECIES_HUMAN, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_GRAVWORLDER, SPECIES_MULE)

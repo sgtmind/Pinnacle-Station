@@ -29,8 +29,8 @@
 /obj/item/clothing/suit/armor/systems_alliance/marine
 	name = "ONYX Standard Battle Armor"
 	desc = "Developed by Ariake Technologies, this suit exchanges full protective coverage for visibility, unencumbered mobility, and increased accuracy. This is a full environmental armor, with a built-in biofeedback system regulating wearer's adrenaline surges and monitoring medical conditions. Standard issue for all marines."
-	icon = N7_OVERRIDE
-	icon_override = N7_OVERRIDE
+	icon = MARINE_OVERRIDE
+	icon_override = MARINE_OVERRIDE
 	icon_state = "n7_armor"
 	item_state = "n7_armor_w"
 	w_class = ITEM_SIZE_HUGE
@@ -65,7 +65,7 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
 
-/obj/item/clothing/suit/armor/systems_alliance/n7
+/obj/item/clothing/suit/armor/systems_alliance/marine
 	item_state_slots = list(
 		slot_l_hand_str = "space_suit_syndicate",
 		slot_r_hand_str = "space_suit_syndicate",
