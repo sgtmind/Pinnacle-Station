@@ -81,6 +81,10 @@
 	accuracy = 1
 	one_hand_penalty = 4
 
+	overheat_limit = 90
+	overheat_rate = 10
+	overheat_time = 5 SECONDS
+
 	//SMG
 	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=null,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
@@ -362,5 +366,3 @@
 	else
 		icon_state = "battlerifle-empty"
 		wielded_item_state = "battlerifle-wielded-empty"
-
-
