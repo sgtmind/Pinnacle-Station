@@ -251,6 +251,12 @@
 			handle_click_empty(user)
 			break
 
+		if(istype(src, /obj/item/gun/projectile))
+			var/obj/item/gun/projectile/overheater = src
+			if(overheater.is_overheated())
+				break
+			overheater.handle_overheat()
+
 		process_accuracy(projectile, user, target, i, held_twohanded)
 
 		if(pointblank)

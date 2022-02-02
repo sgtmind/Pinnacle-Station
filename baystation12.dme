@@ -2642,6 +2642,7 @@
 #include "code\modules\projectiles\ammunition.dm"
 #include "code\modules\projectiles\effects.dm"
 #include "code\modules\projectiles\gun.dm"
+#include "code\modules\projectiles\overheating.dm"
 #include "code\modules\projectiles\projectile.dm"
 #include "code\modules\projectiles\secure.dm"
 #include "code\modules\projectiles\ammunition\boxes.dm"
