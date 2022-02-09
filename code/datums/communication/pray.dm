@@ -15,6 +15,8 @@
 			receive_communication(communicator, M, "\[<A HREF='?_src_=holder;adminspawncookie=\ref[communicator]'>SC</a>\] \[<A HREF='?_src_=holder;narrateto=\ref[communicator]'>DN</a>\]<span class='notice'>[icon2html(cross, M)] <b><font color=purple>PRAY: </font>[key_name(communicator, 1)]: </b>[message]</span>")
 		else if(communicator == M) //Give it to ourselves
 			receive_communication(communicator, M, "<span class='notice'>[icon2html(cross, M)] <b>You send the prayer, \"[message]\" out into the heavens.</b></span>")
+		if(species_quarian == M)
+			"<span class='notice'>[icon2html(cross, M)] <b>You send the prayer, \"[message]\" out to the Ancestors.</b></span>")
 
 /decl/communication_channel/pray/receive_communication(var/mob/communicator, var/mob/receiver, var/message)
 	..()
