@@ -2564,6 +2564,8 @@
 #include "code\modules\persistence\persistence_datum_paper.dm"
 #include "code\modules\persistence\persistence_datum_paper_sticky.dm"
 #include "code\modules\pinnacle_station\species\geth\geth.dm"
+#include "code\modules\pinnacle_station\weapons\human_weapons\__ammo.dm"
+#include "code\modules\pinnacle_station\weapons\human_weapons\m8.dm"
 #include "code\modules\pointdefense\pointdefense.dm"
 #include "code\modules\power\apc.dm"
 #include "code\modules\power\batteryrack.dm"

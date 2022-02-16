@@ -1,0 +1,1 @@
+#define CALIBER_M8 			"m8_avenger"

@@ -352,3 +352,5 @@
 	matter = list(MATERIAL_STEEL = 1500)
 	max_ammo = 8
 	multiple_sprites = TRUE
+
+//Pinnacle S
