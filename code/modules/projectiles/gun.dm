@@ -345,9 +345,6 @@
 					if(8 to INFINITY)
 						to_chat(user, "<span class='warning'>You struggle to hold \the [src] steady!</span>")
 
-		if(screen_shake)
-			spawn()
-				shake_camera(user, screen_shake+1, screen_shake)
 
 	if(combustion)
 		var/turf/curloc = get_turf(src)
