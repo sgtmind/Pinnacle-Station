@@ -1418,3 +1418,15 @@
 	color = "#0e0900"
 	glass_name = "skrianhi tea"
 	glass_desc = "A blend of teas from Moghes, commonly drank by Unathi."
+
+//Pinnacle Station
+
+/datum/reagent/drink/tupari
+	name = "Tupari"
+	description = "Tupari. It brings your ancestors back from the grave."
+	taste_description = "tupo berry juice"
+	color = "#202800"
+	adj_temp = -8
+
+	glass_name = "Tupari"
+	glass_desc = "Tupari, the sports drink recommended by nine out of ten Tupari drinkers."
